@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView_Volume"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:fontFamily="serif"
+        android:text="Volume"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar_Volume"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <SeekBar
+        android:id="@+id/seekBar_Volume"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:max="100"
+        android:progress="75"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton_ListMusic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Volume" />
+
+    <ImageButton
+        android:id="@+id/imageButton_ListMusic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_Disc1"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_Lyrics"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_Volume"
+        app:srcCompat="@drawable/listadocanciones"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Lyrics"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_Disc1"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_share"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_ListMusic"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_Volume"
+        app:srcCompat="@drawable/verletra"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/imageButton_share"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_Disc1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_Lyrics"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_Volume"
+        app:srcCompat="@drawable/compartir"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView_Disc1"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textView_GroupTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_ListMusic"
+        app:srcCompat="@drawable/album1_avril_lavigne"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView_GroupTitle"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:fontFamily="monospace"
+        android:text="Avril Lavigne"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textView_NameSong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_Disc1"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView_NameSong"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:fontFamily="serif"
+        android:text="Complicated"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar_Time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_GroupTitle"
+        tools:ignore="HardcodedText" />
+
+    <SeekBar
+        android:id="@+id/seekBar_Time"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:max="100"
+        android:progress="25"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton_Anterior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_NameSong" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Anterior"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#00FFFFFF"
+        android:tint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_Pause"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_Time"
+        app:srcCompat="@drawable/anterior"
+        tools:ignore="ContentDescription,UseAppTint" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Pause"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_Next"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_Anterior"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_Time"
+        app:srcCompat="@drawable/pause"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Next"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#00FFFFFF"
+        android:rotationY="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_Pause"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_Time"
+        app:srcCompat="@drawable/anterior"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_Complicated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="textView_GroupTitle,imageView_Disc1,textView_NameSong" />
+
+    <ImageView
+        android:id="@+id/imageView_Disc2"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textView_GroupTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_Lyrics"
+        app:srcCompat="@drawable/album2_avril_lavigne"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView_NameSong2"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:fontFamily="serif"
+        android:text="Girlfriend"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar_Time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_GroupTitle"
+        tools:ignore="HardcodedText" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="textView_NameSong2,imageView_Disc2" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Play"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#00FFFFFF"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_Next"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_Anterior"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_Time"
+        app:srcCompat="@drawable/play"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
